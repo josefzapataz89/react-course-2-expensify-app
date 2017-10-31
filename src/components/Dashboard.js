@@ -1,9 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import ExpenseListFilter from "./ExpenseListFilter";
+
+import ExpenseList from "./ExpenseList";
 
 const Dashboard = () => (
     <div>
-        This is from my dashboard component
+        <ExpenseListFilter />
+        <ExpenseList />
     </div>
 );
 
