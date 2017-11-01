@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import moment from 'moment';
+import numeral from 'numeral';
 
 export const ExpenseListItem = ( { dispatch, id, description, amount, createdAt } ) => (
     <div>
@@ -9,7 +10,11 @@ export const ExpenseListItem = ( { dispatch, id, description, amount, createdAt 
             <h3>{ description }</h3>
         </Link>
 
-        <p>{ (amount) } - { moment(createdAt).format("MMM, Do Y") }</p>
+        <p>
+            { moment(createdAt).format("MMMM Do YYYY") }
+            - 
+            { numeral(amount/100).format('$0,0.00') } 
+        </p>
     </div> 
 );
 
