@@ -1,9 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
+    color: $dark-grey;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: $m-size;
+    line-height: 1.6;
+}
+
+button {
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
 }
 
 .is-active {
